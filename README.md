@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Leftwrite – AI Writing Assistant Chrome Extension
 
-## Getting Started
+Leftwrite is a Chrome extension that helps writers craft articles more efficiently.  
+Built with **React.js**, **Tailwind CSS** and powered by **Claude AI**, it offers real‑time writing suggestions and content generation directly in your browser.  
+The extension handles user authentication through **Firebase** and manages paid subscriptions via **Stripe**, providing a smooth onboarding and billing experience.  
+The project was developed as a freelance engagement between **15 December 2024** and **29 December 2024**.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* **AI‑powered writing assistance** – Integrates Anthropic’s Claude AI to generate on‑topic suggestions and sentences while you write, helping you overcome writer’s block and maintain flow.
+* **Context‑aware content generation** – Request full paragraphs or outlines based on your current topic. Claude AI tailors its output to the context of your article.
+* **Secure authentication** – Utilises Firebase Authentication for user logins and session management. Multiple sign‑in methods (email/password, email link and anonymous sign‑in) are supported via the `firebase/auth/web‑extension` entry point:contentReference[oaicite:0]{index=0}.
+* **Subscription management** – Integrates Stripe to handle recurring payments, enabling a seamless upgrade path from the free tier to premium features.
+* **Clean user interface** – A minimalist interface built with React and Tailwind CSS keeps the focus on your writing. The extension’s popup provides quick access to AI suggestions and account management.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technology stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| Technology          | Purpose                                           |
+|--------------------|---------------------------------------------------|
+| **React.js**       | Builds the frontend interface of the extension    |
+| **Tailwind CSS**   | Provides utility‑first styling for a clean layout |
+| **Claude AI**      | Generates writing suggestions and content         |
+| **Firebase**       | Handles authentication and user session data      |
+| **Stripe**         | Manages subscriptions and secure payments         |
+| **Manifest V3**    | Chrome extension manifest standard                |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Getting started
 
-## Learn More
+### Prerequisites
 
-To learn more about Next.js, take a look at the following resources:
+* **Node.js** and **npm** installed on your development machine.
+* A **Claude AI API key**, **Firebase configuration** and **Stripe API keys**. Create a `.env` file in the project root to store these secrets (see the `.env.example` if provided). Do **not** commit secrets to version control.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Timz-creator/Leftwrite.git
+   cd leftwrite
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
